@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="35dp">
+   <CheckBox
+       android:id="@+id/cb"
+       android:layout_width="65dp"
+       android:layout_height="25dp"
+       android:gravity="center"
+       android:text="餐饮会所"
+       android:textSize="12sp"
+       android:layout_marginRight="5dp"
+       android:button="@null"
+       android:textColor="@drawable/check_text_select"
+       android:background="@drawable/cb_select"
+       app:layout_constraintRight_toRightOf="parent"
+       app:layout_constraintLeft_toLeftOf="parent"
+       app:layout_constraintTop_toTopOf="parent"
+       app:layout_constraintBottom_toBottomOf="parent"/>
+
+</android.support.constraint.ConstraintLayout>

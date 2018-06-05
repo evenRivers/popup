@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@drawable/background"
+        android:layout_margin="5dp">
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/ryc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </android.support.v7.widget.RecyclerView>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/rtv_filt_cancel"
+            android:layout_width="80dp"
+            android:layout_height="25dp"
+            android:layout_marginRight="38dp"
+            android:text="取消"
+            android:textSize="14sp"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:background="@drawable/cancel_white_border"
+
+            />
+        <TextView
+            android:id="@+id/rtv_filt_submit"
+            android:layout_width="80dp"
+            android:layout_height="25dp"
+            android:gravity="center"
+            android:text="确认"
+            android:textSize="14sp"
+            android:textColor="@color/white"
+            android:background="@drawable/confirm_red_border"
+            />
+
+    </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>
