@@ -1,7 +1,6 @@
 package popup.adapter
 
 import android.content.Context
-import android.service.quicksettings.Tile
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
@@ -24,8 +23,8 @@ class ItemAdapter:RecyclerView.Adapter<ItemAdapter.ViewHolder>{
         this.context = context
         this.list = list
         this.title = title
-        for (i in list.indices) {
-            if (list.get(i).isChecked) {
+        for (i in 0 until list.size) {
+            if (list.get(i).isChecked()) {
                 list.get(i).isChecked= false
             }
             if (list.get(i).id == Constants.getIdByKey(title)) {
@@ -82,14 +81,14 @@ class ItemAdapter:RecyclerView.Adapter<ItemAdapter.ViewHolder>{
         }
     }
 
-    fun setSelectedItem(list: List<M_Data>,title: String) {
+    fun setSelectedItem() {
         val data = M_Data()
         var j = 0
         for (i in list.indices) {
             if (list[i].isChecked) {
                 data.id = list[i].id
                 data.name = list[i].name
-                data.isChecked = list[i].isChecked
+                data.isChecked = list[i].isChecked()
                 Constants.setBeanMap(title,data)
                 break
             }

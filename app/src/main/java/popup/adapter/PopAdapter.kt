@@ -11,7 +11,7 @@ import popup.bean.M_Bean
 import popup.layoutManager.MyGridLayoutManager
 
 /**
- *外层-recycleView
+ *
  */
 public class PopAdapter:RecyclerView.Adapter<PopAdapter.ViewHolder> {
 
@@ -50,9 +50,7 @@ public class PopAdapter:RecyclerView.Adapter<PopAdapter.ViewHolder> {
     }
 
     fun setSelectItem(){
-        for (m in 0 until itemCount){
-            adapter.setSelectedItem(list!![m].list,list!![m].title)
-        }
+        adapter.setSelectedItem()
     }
 
      class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
