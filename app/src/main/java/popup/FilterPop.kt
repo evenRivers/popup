@@ -39,7 +39,7 @@ class FilterPop : PopupWindow {
         popWindow = PopupWindow(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT)
         popWindow.contentView = popupView
         setBackgroundAlpha(0.5f);
-        popWindow.isOutsideTouchable = true
+        popWindow.isOutsideTouchable = false
 //        popupWindow.isFocusable = true
         //设置PopupWindow动画
 //        popupWindow.animationStyle = R.style.a
@@ -63,7 +63,9 @@ class FilterPop : PopupWindow {
 
         view.findViewById<View>(R.id.rtv_filt_cancel).setOnClickListener { dissmiss() }
         view.findViewById<View>(R.id.rtv_filt_submit).setOnClickListener {
-            mAdapter.setSelectItem()
+
+                mAdapter.setSelectItem()
+
             dissmiss()
         }
 
