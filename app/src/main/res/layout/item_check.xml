@@ -9,7 +9,6 @@
        android:layout_width="65dp"
        android:layout_height="25dp"
        android:gravity="center"
-       android:text="餐饮会所"
        android:textSize="12sp"
        android:layout_marginRight="5dp"
        android:button="@null"

@@ -2,7 +2,6 @@ package popup
 
 import android.app.Activity
 import android.content.Context
-import android.graphics.drawable.ColorDrawable
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
@@ -14,7 +13,7 @@ import com.popup.qsj.filtrate.R
 import popup.adapter.PopAdapter
 import popup.bean.M_Bean
 
-class FilterPop : PopupWindow{
+class FilterPop : PopupWindow {
 
     private var context: Context
     private lateinit var popWindow: PopupWindow
@@ -39,13 +38,14 @@ class FilterPop : PopupWindow{
         //初始化一个PopupWindow，width和height都是WRAP_CONTENT
         popWindow = PopupWindow(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT)
         popWindow.contentView = popupView
-        popWindow.setBackgroundDrawable(ColorDrawable(0x66000000))
+        setBackgroundAlpha(0.5f);
         popWindow.isOutsideTouchable = true
 //        popupWindow.isFocusable = true
         //设置PopupWindow动画
 //        popupWindow.animationStyle = R.style.a
         //设置是否允许PopupWindow的范围超过屏幕范围
         popWindow.isClippingEnabled = false
+        popWindow.setOnDismissListener  { setBackgroundAlpha(1.0f) }
         popWindow.showAsDropDown(v,0,-50)
     }
 
